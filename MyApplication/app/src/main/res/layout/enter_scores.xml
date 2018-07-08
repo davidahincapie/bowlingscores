@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_enter_scores"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lane"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.davidhincapie.mybowlingscores.EnterScoresActivity">
+
+    <TextView
+        android:id="@+id/enterBowlingScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:text="Enter Bowling Scores:"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/enterBowlingScoreTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <Button
+                android:text="Change Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/changeDateButton"
+                android:layout_weight="1"
+                android:onClick="changeDateClickHandler" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="Date of Games"
+                android:textColor="@android:color/background_light"
+                android:textSize="14sp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Game 1:"
+                android:textColor="@android:color/background_light" />
+
+            <EditText
+                android:id="@+id/game1EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="3"
+                android:text="0"
+                android:textColor="@android:color/background_light"
+                android:inputType="number"
+                android:maxEms="3"
+                android:minEms="3"
+                android:selectAllOnFocus="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Game 2:"
+                android:textColor="@android:color/background_light" />
+
+            <EditText
+                android:id="@+id/game2EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="3"
+                android:text="0"
+                android:textColor="@android:color/background_light"
+                android:inputType="number"
+                android:maxEms="3"
+                android:minEms="3"
+                android:selectAllOnFocus="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game 3:"
+                android:textColor="@android:color/background_light" />
+
+            <EditText
+                android:id="@+id/game3EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="3"
+                android:inputType="number"
+                android:text="0"
+                android:textColor="@android:color/background_light"
+                android:maxEms="3"
+                android:minEms="3"
+                android:selectAllOnFocus="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Series Total: "
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/seriesTotalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@android:color/background_light" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:onClick="saveClickHandler"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp" />
+
+        <Button
+            android:id="@+id/showHistoryButton"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:text="Show History"
+            android:onClick="handleShowHistoryClick" />
+    </LinearLayout>
+</RelativeLayout>
